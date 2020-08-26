@@ -12,12 +12,24 @@ public class SleepyHead {
 		/************************  SLEEPY HEAD  **************************/
 		boolean isWeekend;
 		// Write code to ask the user what day it is.
-        
+        String day = JOptionPane.showInputDialog("What day is it?");
 		// Set the boolean isWeekend based on the value they enter
-		
-		
+		if(day.equals("Saturday")) {
+			isWeekend = true;
+		}
+		if(day.equals("Sunday")) {
+			isWeekend = true;
+		}
+		else {
+			isWeekend = false;
+		}
 		// If it is the weekend, tell the user they get to sleep in.
-		
+		if(isWeekend == true) {
+			JOptionPane.showMessageDialog(null, "You get to sleep in! :)");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Get up and go to school!");
+		}
 		// If it is not the weekend, tell them to get out of bed and go to school!
 		
 		
@@ -25,15 +37,24 @@ public class SleepyHead {
 
 		boolean passedExam;
 		// Write code to ask the user what percentage they scored in their last exam
-
-		
+		String score = JOptionPane.showInputDialog("What score did you get on your exam?");
+		double grade = Double.parseDouble(score);
 		// If they scored more than 70, they passed the exam.
 		// Set the boolean passedExam based on their score.
-		
+		if(grade>=70) {
+			passedExam = true;
+		}
+		else {
+			passedExam = false;
+		}
 		// If the user passed the exam, congratulate them
-		
+		if(passedExam == true) {
+			JOptionPane.showMessageDialog(null, "Congrats! You passed!");
+		}
 		// otherwise, wish them better luck next time.
-		
+		else {
+			JOptionPane.showMessageDialog(null, "Oh. Better luck next time!");
+		}
 		
 		/************************  GAME OVER  **************************/
 
@@ -46,16 +67,20 @@ public class SleepyHead {
 				gameIsOver = true;
 			
 			// If they answer "yes", change gameIsOver to true
-
+			if(gameOver.equals("yes")) {
+				gameIsOver = true;
+			}
 		}
 		// Tell the user "game is over" 
-		
+			if(gameIsOver==true) {
+				JOptionPane.showMessageDialog(null, "game is over");
+			}
 		
 		/***********************   RED SQUARE  ********************/
 		
 		boolean isRed;
 		// Ask the user what color to draw with. Based on their answer, set the isRed variable
-		
+		 
 		
 		boolean isSquare;		
 		// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
